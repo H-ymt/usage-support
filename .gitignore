@@ -50,3 +50,9 @@ tmp
 temp
 .claude
 .serena
+
+# Supabase
+.branches
+.temp
+supabase/.branches
+supabase/.temp

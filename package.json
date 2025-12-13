@@ -1,6 +1,7 @@
 {
 	"name": "usage-support",
 	"private": true,
+	"packageManager": "pnpm@10.25.0",
 	"type": "module",
 	"workspaces": [
 		"apps/*",
@@ -23,20 +24,25 @@
 		"db:push": "turbo -F @usage-support/db db:push",
 		"db:studio": "turbo -F @usage-support/db db:studio",
 		"db:generate": "turbo -F @usage-support/db db:generate",
-		"db:migrate": "turbo -F @usage-support/db db:migrate"
+		"db:migrate": "turbo -F @usage-support/db db:migrate",
+		"supabase:start": "supabase start",
+		"supabase:stop": "supabase stop",
+		"supabase:status": "supabase status",
+		"supabase:reset": "supabase db reset",
+		"supabase:types": "supabase gen types typescript --local > packages/db/src/supabase.types.ts"
 	},
 	"dependencies": {
 		"dotenv": "catalog:",
 		"zod": "catalog:"
 	},
 	"devDependencies": {
-		"turbo": "^2.5.4",
 		"@biomejs/biome": "^2.2.0",
+		"@cloudflare/workers-types": "catalog:",
+		"@types/node": "catalog:",
 		"husky": "^9.1.7",
 		"lint-staged": "^16.1.2",
-		"typescript": "catalog:",
-		"@types/node": "catalog:",
-		"@cloudflare/workers-types": "catalog:"
+		"turbo": "^2.5.4",
+		"typescript": "catalog:"
 	},
 	"lint-staged": {
 		"*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
