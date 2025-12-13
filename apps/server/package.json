@@ -1,36 +1,36 @@
 {
-  "name": "server",
-  "main": "src/index.ts",
-  "type": "module",
-  "scripts": {
-    "build": "tsdown",
-    "check-types": "tsc -b",
-    "compile": "bun build --compile --minify --sourcemap --bytecode ./src/index.ts --outfile server",
-    "dev": "alchemy dev",
-    "deploy": "alchemy deploy",
-    "destroy": "alchemy destroy"
-  },
-  "dependencies": {
-    "hono": "catalog:",
-    "@trpc/server": "catalog:",
-    "@hono/trpc-server": "^0.4.0",
-    "better-auth": "catalog:",
-    "dotenv": "catalog:",
-    "zod": "catalog:",
-    "@usage-support/api": "workspace:*",
-    "@usage-support/auth": "workspace:*",
-    "@usage-support/db": "workspace:*"
-  },
-  "trustedDependencies": [
-    "supabase"
-  ],
-  "devDependencies": {
-    "typescript": "catalog:",
-    "tsdown": "^0.16.5",
-    "@usage-support/config": "workspace:*",
-    "alchemy": "^0.81.1",
-    "wrangler": "^4.40.3",
-    "@types/node": "catalog:",
-    "@cloudflare/workers-types": "catalog:"
-  }
+	"name": "server",
+	"main": "src/index.ts",
+	"type": "module",
+	"scripts": {
+		"build": "tsdown",
+		"check-types": "tsc -b",
+		"compile": "bun build --compile --minify --sourcemap --bytecode ./src/index.ts --outfile server",
+		"dev": "alchemy dev",
+		"deploy": "alchemy deploy",
+		"destroy": "alchemy destroy"
+	},
+	"dependencies": {
+		"hono": "catalog:",
+		"@trpc/server": "catalog:",
+		"@hono/trpc-server": "^0.4.0",
+		"better-auth": "catalog:",
+		"dotenv": "catalog:",
+		"zod": "catalog:",
+		"@usage-support/api": "workspace:*",
+		"@usage-support/auth": "workspace:*",
+		"@usage-support/db": "workspace:*"
+	},
+	"trustedDependencies": [
+		"supabase"
+	],
+	"devDependencies": {
+		"typescript": "catalog:",
+		"tsdown": "^0.16.5",
+		"@usage-support/config": "workspace:*",
+		"alchemy": "^0.81.1",
+		"wrangler": "^4.40.3",
+		"@types/node": "catalog:",
+		"@cloudflare/workers-types": "catalog:"
+	}
 }

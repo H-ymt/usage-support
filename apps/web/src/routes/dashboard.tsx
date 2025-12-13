@@ -1,7 +1,7 @@
-import { getUser } from "@/functions/get-user";
-import { useTRPC } from "@/utils/trpc";
 import { useQuery } from "@tanstack/react-query";
 import { createFileRoute, redirect } from "@tanstack/react-router";
+import { getUser } from "@/functions/get-user";
+import { useTRPC } from "@/utils/trpc";
 
 export const Route = createFileRoute("/dashboard")({
 	component: RouteComponent,

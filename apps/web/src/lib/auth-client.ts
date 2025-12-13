@@ -1,4 +1,3 @@
-import type { auth } from "@usage-support/auth";
 import { createAuthClient } from "better-auth/react";
 
 export const authClient = createAuthClient({

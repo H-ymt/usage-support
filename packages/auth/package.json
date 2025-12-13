@@ -1,23 +1,23 @@
 {
-  "name": "@usage-support/auth",
-  "exports": {
-    ".": {
-      "default": "./src/index.ts"
-    },
-    "./*": {
-      "default": "./src/*.ts"
-    }
-  },
-  "type": "module",
-  "scripts": {},
-  "devDependencies": {
-    "typescript": "catalog:",
-    "@usage-support/config": "workspace:*"
-  },
-  "dependencies": {
-    "better-auth": "catalog:",
-    "dotenv": "catalog:",
-    "zod": "catalog:",
-    "@usage-support/db": "workspace:*"
-  }
+	"name": "@usage-support/auth",
+	"exports": {
+		".": {
+			"default": "./src/index.ts"
+		},
+		"./*": {
+			"default": "./src/*.ts"
+		}
+	},
+	"type": "module",
+	"scripts": {},
+	"devDependencies": {
+		"typescript": "catalog:",
+		"@usage-support/config": "workspace:*"
+	},
+	"dependencies": {
+		"better-auth": "catalog:",
+		"dotenv": "catalog:",
+		"zod": "catalog:",
+		"@usage-support/db": "workspace:*"
+	}
 }
