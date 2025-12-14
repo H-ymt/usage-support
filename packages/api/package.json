@@ -11,16 +11,17 @@
 	"type": "module",
 	"scripts": {},
 	"devDependencies": {
-		"typescript": "catalog:",
-		"@usage-support/config": "workspace:*"
+		"@usage-support/config": "workspace:*",
+		"typescript": "catalog:"
 	},
 	"dependencies": {
-		"@trpc/server": "catalog:",
 		"@trpc/client": "catalog:",
-		"hono": "catalog:",
-		"dotenv": "catalog:",
-		"zod": "catalog:",
+		"@trpc/server": "catalog:",
 		"@usage-support/auth": "workspace:*",
-		"@usage-support/db": "workspace:*"
+		"@usage-support/db": "workspace:*",
+		"dotenv": "catalog:",
+		"drizzle-orm": "^0.45.1",
+		"hono": "catalog:",
+		"zod": "catalog:"
 	}
 }

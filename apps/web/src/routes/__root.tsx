@@ -12,6 +12,7 @@ import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import type { TRPCOptionsProxy } from "@trpc/tanstack-react-query";
 import type { AppRouter } from "@usage-support/api/routers/index";
 import { Toaster } from "@/components/ui/sonner";
+import { LiffProvider } from "@/contexts/liff-context";
 import Header from "../components/header";
 import appCss from "../index.css?url";
 export interface RouterAppContext {
@@ -46,18 +47,20 @@ export const Route = createRootRouteWithContext<RouterAppContext>()({
 
 function RootDocument() {
 	return (
-		<html lang="en" className="dark">
+		<html lang="ja" className="dark">
 			<head>
 				<HeadContent />
 			</head>
 			<body>
-				<div className="grid h-svh grid-rows-[auto_1fr]">
-					<Header />
-					<Outlet />
-				</div>
-				<Toaster richColors />
-				<TanStackRouterDevtools position="bottom-left" />
-				<ReactQueryDevtools position="bottom" buttonPosition="bottom-right" />
+				<LiffProvider>
+					<div className="grid h-svh grid-rows-[auto_1fr]">
+						<Header />
+						<Outlet />
+					</div>
+					<Toaster richColors />
+					<TanStackRouterDevtools position="bottom-left" />
+					<ReactQueryDevtools position="bottom" buttonPosition="bottom-right" />
+				</LiffProvider>
 				<Scripts />
 			</body>
 		</html>

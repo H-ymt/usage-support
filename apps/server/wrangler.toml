@@ -1,0 +1,14 @@
+name = "usage-support-server"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+
+# ローカル開発設定
+[dev]
+port = 3000
+local_protocol = "http"
+
+# 環境変数（.envファイルから自動読み込み）
+[vars]
+
+# データベース接続（Cloudflare D1は使用しない）
+# ローカル開発ではPostgreSQL（Supabase）を使用

@@ -4,9 +4,10 @@ import { boolean, index, pgTable, text, timestamp } from "drizzle-orm/pg-core";
 export const user = pgTable("user", {
 	id: text("id").primaryKey(),
 	name: text("name").notNull(),
-	email: text("email").notNull().unique(),
+	email: text("email"), // LIFF認証ではemailなしで登録可能にするためnullableに変更
 	emailVerified: boolean("email_verified").default(false).notNull(),
 	image: text("image"),
+	userKey: text("user_key").unique(), // LINE LIFF user_key（UNIQUE制約）
 	createdAt: timestamp("created_at").defaultNow().notNull(),
 	updatedAt: timestamp("updated_at")
 		.defaultNow()

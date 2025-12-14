@@ -1,0 +1,21 @@
+version: "3"
+
+# ngrok設定ファイル
+# authtoken: 環境変数 NGROK_AUTHTOKEN または `ngrok config add-authtoken` で設定
+
+tunnels:
+  web:
+    proto: http
+    addr: 3001
+    # 無料プランの場合は以下をコメントアウト
+    # domain: your-custom-domain.ngrok-free.app
+    inspect: true
+    bind_tls: true
+
+  server:
+    proto: http
+    addr: 3000
+    # 無料プランの場合は以下をコメントアウト
+    # domain: your-api-domain.ngrok-free.app
+    inspect: true
+    bind_tls: true

@@ -6,31 +6,34 @@
 		"build": "tsdown",
 		"check-types": "tsc -b",
 		"compile": "bun build --compile --minify --sourcemap --bytecode ./src/index.ts --outfile server",
-		"dev": "alchemy dev",
+		"dev": "tsx watch src/server.ts",
+		"dev:cloudflare": "wrangler dev",
 		"deploy": "alchemy deploy",
 		"destroy": "alchemy destroy"
 	},
 	"dependencies": {
-		"hono": "catalog:",
-		"@trpc/server": "catalog:",
+		"@hono/node-server": "^1.19.7",
 		"@hono/trpc-server": "^0.4.0",
-		"better-auth": "catalog:",
-		"dotenv": "catalog:",
-		"zod": "catalog:",
+		"@trpc/server": "catalog:",
 		"@usage-support/api": "workspace:*",
 		"@usage-support/auth": "workspace:*",
-		"@usage-support/db": "workspace:*"
+		"@usage-support/db": "workspace:*",
+		"better-auth": "catalog:",
+		"dotenv": "catalog:",
+		"hono": "catalog:",
+		"tsx": "^4.21.0",
+		"zod": "catalog:"
 	},
 	"trustedDependencies": [
 		"supabase"
 	],
 	"devDependencies": {
-		"typescript": "catalog:",
-		"tsdown": "^0.16.5",
+		"@cloudflare/workers-types": "catalog:",
+		"@types/node": "catalog:",
 		"@usage-support/config": "workspace:*",
 		"alchemy": "^0.81.1",
-		"wrangler": "^4.40.3",
-		"@types/node": "catalog:",
-		"@cloudflare/workers-types": "catalog:"
+		"tsdown": "^0.16.5",
+		"typescript": "catalog:",
+		"wrangler": "^4.40.3"
 	}
 }

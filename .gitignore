@@ -56,3 +56,7 @@ temp
 .temp
 supabase/.branches
 supabase/.temp
+
+# ngrok
+ngrok-*.log
+.ngrok
